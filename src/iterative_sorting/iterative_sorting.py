@@ -25,24 +25,22 @@ print("Insertion sort: ", insertion_sort(l))
 
 n = list(range(20))
 random.shuffle(n)
-print(n)
 
 
 def selection_sort(arr):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         cur_index = i
-        smallest_index = cur_index
+        smallest_item = None
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
-        # print(i, cur_index, smallest_index)
         j = i
         while j < len(arr) - 1 and cur_index < len(arr) - 1:
             # if value cur_index > value arr[j] swap values
             if arr[cur_index] > arr[j + 1]:
-                smallest_index = arr[j + 1]
+                smallest_item = arr[j + 1]
                 arr[j + 1] = arr[cur_index]
-                arr[cur_index] = smallest_index
+                arr[cur_index] = smallest_item
             j += 1
     return arr
 
