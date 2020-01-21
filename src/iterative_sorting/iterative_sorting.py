@@ -29,13 +29,13 @@ random.shuffle(n)
 
 def selection_sort(arr):
     # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
+    for i in range(0, len(arr)):
         cur_index = i
         smallest_item = None
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         j = i
-        while j < len(arr) - 1 and cur_index < len(arr) - 1:
+        while j < len(arr) - 1:
             # if value cur_index > value arr[j] swap values
             if arr[cur_index] > arr[j + 1]:
                 smallest_item = arr[j + 1]
